@@ -1,124 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="xxxxxxxxxxxxxxxxxxxxxx">
-  <title>Posto</title>
-  ...
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Posto | Rəsmi Oyun Saytı</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>POSTO — Oyun Rəsmi Saytı</title>
+  <meta name="description" content="POSTO — Sumo Studios tərəfindən hazırlanmış indie oyun. Yüklə və oynamağa başla!">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0e0e0e;
-      color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 50px 20px 20px 20px;
-      background-color: #111;
-      border-bottom: 1px solid #222;
-    }
-    header h1 {
-      font-size: 50px;
-      margin: 0;
-      color: #ffcc00;
-      letter-spacing: 2px;
-    }
-    nav {
-      background-color: #111;
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-      gap: 30px;
-    }
-    nav a {
-      color: #ffcc00;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #ffaa00;
-    }
-    .content {
-      text-align: center;
-      padding: 30px 20px;
-      line-height: 1.8;
-      color: #ddd;
-    }
-    .download {
-      text-align: center;
-      margin: 40px 0;
-    }
-    .download a {
-      background-color: #ffcc00;
-      color: #000;
-      text-decoration: none;
-      padding: 15px 40px;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.3s;
-    }
-    .download a:hover {
-      background-color: #ffaa00;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      background-color: #111;
-      border-top: 1px solid #222;
-      color: #aaa;
-    }
-    footer p {
-      margin: 8px 0;
-    }
+    :root{--bg:#0b0f14;--card:#0f1620;--accent:#66d9ef;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071021 0%,#08121b 100%);color:#e6eef6;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1200px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5ec1b5);display:flex;align-items:center;justify-content:center;font-weight:700;color:#05202b}
+    h1{margin:0;font-size:26px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    .hero{display:grid;grid-template-columns:1fr 400px;gap:28px;margin-top:28px;align-items:start}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 20px rgba(2,6,12,0.6)}
+    .lead{color:var(--muted);margin-top:8px}
+    .play-area{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+    .btn{display:inline-block;padding:14px 18px;border-radius:10px;font-weight:600;text-decoration:none;text-align:center}
+    .btn-primary{background:var(--accent);color:#032225}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+    .thumb{width:100%;height:0;display:none}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}
+    section h2{margin:0 0 10px 0}
+    .meta{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{padding:6px 10px;border-radius:999px;background:var(--glass);font-size:13px;color:var(--muted)}
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:13px}
+    .screenshot{height:160px;border-radius:8px;background:linear-gradient(180deg,#061018,#07202a);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    .controls pre{background:rgba(0,0,0,0.2);padding:10px;border-radius:6px;overflow:auto}
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">POSTO</div>
+        <div>
+   
+          <div class="lead">Sumo Studios — indie oyun. Sadə, sürətli və qəlbi olan oyun təcrübəsi.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#haqqinda">Haqqında</a>
+        <a href="#yukle">Yüklə</a>
+        <a href="#elaqe">Əlaqə</a>
+      </nav>
+    </header>
 
-  <header>
-    <h1>POSTO</h1>
-  </header>
+    <main class="hero">
+      <div>
+        <div class="card">
+          <h2 id="haqqinda">Oyun haqqında</h2>
+          <p class="lead">POSTO — sürətli top-down 2D oyun. Müxtəlif səviyyələr, multiplayer/yerli modüllər, və sadə nəzarət ilə oynanır. Bu səhifə yalnız Azərbaycan dilində təqdim olunur.</p>
 
-  <nav>
-    <a href="#haqqinda">Haqqında</a>
-    <a href="#endirme">Endir</a>
-    <a href="#lisensiya">Lisenziya</a>
-  </nav>
+          <div class="meta" style="margin-top:12px">
+            <div class="pill">Janr: Top-down / Aksiya</div>
+            <div class="pill">Studiya: Sumo Studios</div>
+            <div class="pill">Platforma: Windows (yaxın gələcəkdə daha çox)</div>
+          </div>
 
-  <div id="haqqinda" class="content">
-    <h2>Haqqında</h2>
-    <p>
-      <strong>Posto</strong> — yuxarıdan baxış (top-down) tərzində hazırlanmış döyüş və fəaliyyət oyunudur.
-      Oyunda dosttlarınızla qoşula bilərsiz və birlikdə vs atıb biriniz qazana bilərsiniz.
-      Sadə idarəetmə və sürətli oyun mexanikası ilə fərqlənir. 
-      Oyun zəif sistemlərdə belə axıcı işləyir — minimum <strong>1 GB RAM</strong> kifayətdir.
-    </p>
+          <h3 style="margin-top:14px">Xüsusiyyətlər</h3>
+          <ul>
+            <li>Çox oyunçu dəstəyi (yerli və onlayn).</li>
+            <li>Sürətli oynanış və müxtəlif silahlar.</li>
+            <li>Hafif sistem tələbləri — 128–512 MB RAM üçün optimallaşdırma məqsədləri.</li>
+            <li>Sadə və intuitiv nəzarət.</li>
+          </ul>
+
+          <h3 style="margin-top:12px">Yeniliklər</h3>
+          <p class="lead">Son yeniliklər və yamaq qeydləri üçün bu səhifəni izləyin.</p>
+        </div>
+
+       
+
+      </div>
+
+      <aside class="card play-area">
+        <div class="thumb"></div>
+
+        <div>
+          <a id="downloadBtn" class="btn btn-primary" href="https://drive.google.com/file/d/1useL_1xLFp3rl0ZFrXojliNAnvyf1n74/view?usp=drive_link" target="_blank" rel="noopener">Oyun yüklə / Aç</a>
+        </div>
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+          <a class="btn btn-ghost" href="#tələbler">Sistem tələbləri</a>
+          <a class="btn btn-ghost" href="#elaqe">Əlaqə</a>
+        </div>
+
+        <div style="margin-top:12px;font-size:13px;color:var(--muted)">Link Google Drive üzərində açılır. Əgər birbaşa yükləmə istəyirsinizsə, mən linki birbaşa yükləmə URL-na çevirməyə kömək edə bilərəm.</div>
+
+        <div style="margin-top:12px">
+          <h4>Oyun faylı</h4>
+          <div class="pill">POSTO - Sumo Studios</div>
+          <div class="lead" style="margin-top:8px">Versiya: 1.0 (ilk buraxılış)</div>
+        </div>
+      </aside>
+    </main>
+
+    <section class="card" style="margin-top:18px">
+      <h2 id="tələbler">Sistem tələbləri</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr;">
+        <div>
+          <h4>Minimum</h4>
+          <ul>
+            <li>OS: Windows 7/8/10 (32/64 bit)</li>
+            <li>RAM: 128 MB (ən azı) — oyunun yüngül versiyası üçün</li>
+            <li>Prosessor: 1.2 GHz və ya ekvivalent</li>
+            <li>Disk: 50 MB boş yer</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Tövsiyə olunan</h4>
+          <ul>
+            <li>OS: Windows 10</li>
+            <li>RAM: 512 MB</li>
+            <li>Prosessor: 1.6 GHz və ya daha yaxşı</li>
+            <li>Disk: 100 MB boş yer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card controls" style="margin-top:14px">
+      <h2>Nəzarət</h2>
+      <div class="grid" style="grid-template-columns:1fr 1fr;">
+        <div>
+          <h4>Klaviatura</h4>
+          <pre>Hərəkət: WAS
+Etkileşim: E
+Pause: Esc</pre>
+        </div>
+        <div>
+          <h4>Controller</h4>
+          <pre>Sol çəkmə: Hərəkət
+click left: Atəş
+Start: Pause</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="elaqe" style="margin-top:14px">
+      <h2>Əlaqə</h2>
+      <p class="lead">Suallar, texniki problemlər və ya təklif üçün bizə yazın:</p>
+      <p>Sumo Studios — <a href="mailto:sediqedimov972@gmail.com">sediqedimov972@gmail.com</a></p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Sumo Studios — Bütün hüquqlar qorunur. Sayt yalnız Azərbaycan dilində təqdim olunur.
+    </footer>
   </div>
 
-  <div id="endirme" class="download">
-    <a href="https://drive.google.com/file/d/1xD6U7-2byYmCAkLRaLkzkj5iWF57m9N4/view?usp=drive_link" target="_blank">
-      📥 Oyunu Yüklə
-    </a>
-  </div>
-
-  <footer id="lisensiya">
-    <p>© 2025 Sumo Studios — Bütün hüquqlar qorunur.</p>
-    <p>Bu proqram məhsulu yalnız şəxsi istifadə üçün nəzərdə tutulub.</p>
-    <p>Lisenziya: Creative Distribution / Non-commercial Use</p>
-    <p>Əlaqə: <a href="mailto:sumostudios@gmail.com" style="color:#ffcc00; text-decoration:none;">sumostudios@gmail.com</a></p>
-  </footer>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
